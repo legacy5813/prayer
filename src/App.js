@@ -1,13 +1,18 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import './App.css';
-
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'; 
+import Fahim from './Fahim';
+import Umer from './Umer';
 function App() {
-  console.log("Hello Umer")
+
+
   return (
     <div className="App">
-      <h1>Umer is happy</h1>
-      <Button variant="success">Click me</Button>
+    <BrowserRouter /*Wrap entire div content with browser router for using route components*/>
+       <Routes /*Routes tag used to contain all the invididual route paths to the pages, route tag is each individual path defined*/ >
+         <Route path="/"element={<><Fahim /> <Umer /> </>}/>
+       </Routes>
+      </BrowserRouter>
     </div>
   );
 }
