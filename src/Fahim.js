@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import './Fahim.css';
 import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 import axios from "axios";
 
 const Fahim = () => {
@@ -34,8 +36,17 @@ const Fahim = () => {
 
     return ( 
         <div>
-            <h1 className="title">Prayer</h1>
-            <Button variant="success">Click me Fahim</Button>
+            <h1 className="place">Mansfield</h1>
+
+            <Card className="prayerDiv">
+                <h2 className="prayerText">Fajr: {fajr}</h2>
+                <h2 className="prayerText">Sunrise: {sunrise}</h2>
+                <h2 className="prayerText">Dhuhr: {dhuhr}</h2>
+                <h2 className="prayerText">Asr: {asr}</h2>
+                <h2 className="prayerText">Maghrib: {maghrib}</h2>
+                <h2 className="prayerText">Isha: {isha}</h2>
+            
+            </Card>
 
         </div>
      );
